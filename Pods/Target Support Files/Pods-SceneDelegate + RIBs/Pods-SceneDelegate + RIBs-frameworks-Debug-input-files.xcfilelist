@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SceneDelegate + RIBs/Pods-SceneDelegate + RIBs-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RIBs/RIBs.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

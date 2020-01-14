@@ -1,0 +1,6 @@
+framework module Pods_SceneDelegate___RIBs {
+  umbrella header "Pods-SceneDelegate + RIBs-umbrella.h"
+
+  export *
+  module * { export * }
+}
