@@ -43,4 +43,8 @@ final class JinnyInteractor: PresentableInteractor<JinnyPresentable>, JinnyInter
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func moveToZedd() {
+        
+    }
 }

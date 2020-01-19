@@ -43,4 +43,8 @@ final class ZeddInteractor: PresentableInteractor<ZeddPresentable>, ZeddInteract
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func moveToJinny() {
+        
+    }
 }
