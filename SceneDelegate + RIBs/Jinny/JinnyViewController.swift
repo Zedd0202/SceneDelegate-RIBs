@@ -17,11 +17,31 @@ protocol JinnyPresentableListener: class {
 }
 
 final class JinnyViewController: UIViewController, JinnyPresentable, JinnyViewControllable {
-
+    
     weak var listener: JinnyPresentableListener?
+    
+    var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("move to Jinny", for: .normal)
+        button.backgroundColor = .red
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.view.addSubview(self.button)
+        self.button.translatesAutoresizingMaskIntoConstraints = false
+        self.button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        self.button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        self.button.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        self.button.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        self.button.addTarget(self, action: #selector(self.buttonDidTap), for: .touchUpInside)
+    }
+    
+    @objc
+    func buttonDidTap() {
+        
     }
 }
