@@ -20,6 +20,7 @@ protocol JinnyPresentable: Presentable {
 
 protocol JinnyListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didMoveToZedd()
 }
 
 final class JinnyInteractor: PresentableInteractor<JinnyPresentable>, JinnyInteractable, JinnyPresentableListener {
@@ -45,6 +46,7 @@ final class JinnyInteractor: PresentableInteractor<JinnyPresentable>, JinnyInter
     }
     
     func moveToZedd() {
-        
+        // Root에게 알려야함.
+        self.listener?.didMoveToZedd()
     }
 }
