@@ -17,6 +17,11 @@ protocol ZeddPresentableListener: class {
 }
 
 final class ZeddViewController: UIViewController, ZeddPresentable, ZeddViewControllable {
-
+    
     weak var listener: ZeddPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .white
+    }
 }

@@ -19,4 +19,9 @@ protocol JinnyPresentableListener: class {
 final class JinnyViewController: UIViewController, JinnyPresentable, JinnyViewControllable {
 
     weak var listener: JinnyPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .white
+    }
 }
