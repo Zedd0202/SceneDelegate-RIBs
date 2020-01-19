@@ -14,6 +14,7 @@ protocol JinnyPresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
+    func moveToZedd()
 }
 
 final class JinnyViewController: UIViewController, JinnyPresentable, JinnyViewControllable {
@@ -42,6 +43,6 @@ final class JinnyViewController: UIViewController, JinnyPresentable, JinnyViewCo
     
     @objc
     func buttonDidTap() {
-        
+        self.listener?.moveToZedd()
     }
 }
