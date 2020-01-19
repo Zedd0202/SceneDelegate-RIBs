@@ -25,4 +25,12 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 
         self.view.backgroundColor = UIColor.white
      }
+    
+    func present(viewController: ViewControllable) {
+        self.present(viewController.uiviewController, animated: true)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        viewController.uiviewController.dismiss(animated: true, completion: nil)
+    }
 }

@@ -40,6 +40,4 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 }
 
-extension RootComponent: JinnyDependency, ZeddDependency {
-    
-}
+extension RootComponent: JinnyDependency, ZeddDependency {}

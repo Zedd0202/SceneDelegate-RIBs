@@ -14,6 +14,8 @@ protocol RootInteractable: Interactable {
 }
 
 protocol RootViewControllable: ViewControllable {
+    func present(viewController: ViewControllable)
+    func dismiss(viewController: ViewControllable)
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
