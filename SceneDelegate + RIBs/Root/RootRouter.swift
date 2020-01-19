@@ -24,6 +24,10 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     // TODO: Constructor inject child builder protocols to allow building children.
     private let jinnyBuilder: JinnyBuildable
     private let zeddBuilder: ZeddBuildable
+    
+    var jinny: ViewableRouting?
+    var zedd: ViewableRouting?
+    
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
          jinnyBuilder: JinnyBuildable,
@@ -41,13 +45,25 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     }
     
     func routeToJinny() {
+        if let zedd = self.zedd {
+            self.detachChild(zedd)
+            self.viewController.dismiss(viewController: zedd.viewControllable)
+            self.zedd = nil
+        }
         let jinny = self.jinnyBuilder.build(withListener: self.interactor)
+        self.jinny = jinny
         self.attachChild(jinny)
         self.viewController.present(viewController: jinny.viewControllable)
     }
     
     func routeToZedd() {
+        if let jinny = self.jinny {
+            self.detachChild(jinny)
+            self.viewController.dismiss(viewController: jinny.viewControllable)
+            self.jinny = nil
+        }
         let zedd = self.zeddBuilder.build(withListener: self.interactor)
+        self.zedd = zedd
         self.attachChild(zedd)
         self.viewController.present(viewController: zedd.viewControllable)
     }

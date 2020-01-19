@@ -23,10 +23,11 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     override func viewDidLoad() {
          super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.systemYellow
      }
     
     func present(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
         self.present(viewController.uiviewController, animated: true)
     }
     

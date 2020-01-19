@@ -47,10 +47,10 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     }
     
     func didMoveToZedd() {
-    
+        self.router?.routeToZedd()
     }
     
     func didMoveToJinny() {
-        
+        self.router?.routeToJinny()
     }
 }

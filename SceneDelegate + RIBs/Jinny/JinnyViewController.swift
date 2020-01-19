@@ -23,7 +23,7 @@ final class JinnyViewController: UIViewController, JinnyPresentable, JinnyViewCo
     
     var button: UIButton = {
         let button = UIButton()
-        button.setTitle("move to Jinny", for: .normal)
+        button.setTitle("move to Zedd", for: .normal)
         button.backgroundColor = .red
         return button
     }()
