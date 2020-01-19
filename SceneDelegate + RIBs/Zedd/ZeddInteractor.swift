@@ -20,6 +20,7 @@ protocol ZeddPresentable: Presentable {
 
 protocol ZeddListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didMoveToJinny()
 }
 
 final class ZeddInteractor: PresentableInteractor<ZeddPresentable>, ZeddInteractable, ZeddPresentableListener {
@@ -45,6 +46,6 @@ final class ZeddInteractor: PresentableInteractor<ZeddPresentable>, ZeddInteract
     }
     
     func moveToJinny() {
-        
+        self.listener?.didMoveToJinny()
     }
 }
