@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable {
+protocol RootInteractable: Interactable, JinnyListener, ZeddListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -33,5 +33,19 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         self.zeddBuilder = zeddBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        let jinny = self.jinnyBuilder.build(withListener: self.interactor)
+        
+    }
+    
+    func routeToJinny() {
+        
+    }
+    
+    func routeToZedd() {
+        
     }
 }
