@@ -11,6 +11,8 @@ import RxSwift
 
 protocol RootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToZedd()
+    func routeToJinny()
 }
 
 protocol RootPresentable: Presentable {
@@ -45,7 +47,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     }
     
     func didMoveToZedd() {
-        
+    
     }
     
     func didMoveToJinny() {
