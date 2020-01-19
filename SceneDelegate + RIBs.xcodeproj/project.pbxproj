@@ -18,6 +18,14 @@
 		14110BB023CD7FF300954407 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BAC23CD7FF300954407 /* RootBuilder.swift */; };
 		14110BB123CD7FF300954407 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BAD23CD7FF300954407 /* RootInteractor.swift */; };
 		14110BB323CD874B00954407 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BB223CD874B00954407 /* AppComponent.swift */; };
+		14C7086A23D4324000155C18 /* ZeddRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086623D4324000155C18 /* ZeddRouter.swift */; };
+		14C7086B23D4324000155C18 /* ZeddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086723D4324000155C18 /* ZeddViewController.swift */; };
+		14C7086C23D4324000155C18 /* ZeddBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086823D4324000155C18 /* ZeddBuilder.swift */; };
+		14C7086D23D4324000155C18 /* ZeddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086923D4324000155C18 /* ZeddInteractor.swift */; };
+		14C7087223D4324700155C18 /* JinnyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086E23D4324700155C18 /* JinnyRouter.swift */; };
+		14C7087323D4324700155C18 /* JinnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7086F23D4324700155C18 /* JinnyViewController.swift */; };
+		14C7087423D4324700155C18 /* JinnyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7087023D4324700155C18 /* JinnyBuilder.swift */; };
+		14C7087523D4324700155C18 /* JinnyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7087123D4324700155C18 /* JinnyInteractor.swift */; };
 		9C2FD3CA3E239F264C148FA5 /* Pods_SceneDelegate___RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CFD1B8EE2F3DAD947582B6 /* Pods_SceneDelegate___RIBs.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +43,14 @@
 		14110BAC23CD7FF300954407 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		14110BAD23CD7FF300954407 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		14110BB223CD874B00954407 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		14C7086623D4324000155C18 /* ZeddRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeddRouter.swift; sourceTree = "<group>"; };
+		14C7086723D4324000155C18 /* ZeddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeddViewController.swift; sourceTree = "<group>"; };
+		14C7086823D4324000155C18 /* ZeddBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeddBuilder.swift; sourceTree = "<group>"; };
+		14C7086923D4324000155C18 /* ZeddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeddInteractor.swift; sourceTree = "<group>"; };
+		14C7086E23D4324700155C18 /* JinnyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinnyRouter.swift; sourceTree = "<group>"; };
+		14C7086F23D4324700155C18 /* JinnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinnyViewController.swift; sourceTree = "<group>"; };
+		14C7087023D4324700155C18 /* JinnyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinnyBuilder.swift; sourceTree = "<group>"; };
+		14C7087123D4324700155C18 /* JinnyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinnyInteractor.swift; sourceTree = "<group>"; };
 		39CFD1B8EE2F3DAD947582B6 /* Pods_SceneDelegate___RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_SceneDelegate___RIBs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F891EDC22C573C29B6006069 /* Pods-SceneDelegate + RIBs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneDelegate + RIBs.release.xcconfig"; path = "Target Support Files/Pods-SceneDelegate + RIBs/Pods-SceneDelegate + RIBs.release.xcconfig"; sourceTree = "<group>"; };
 		FEABA7D5F0261E91BBD7CE35 /* Pods-SceneDelegate + RIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneDelegate + RIBs.debug.xcconfig"; path = "Target Support Files/Pods-SceneDelegate + RIBs/Pods-SceneDelegate + RIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +89,8 @@
 		14110B9423CD7F1F00954407 /* SceneDelegate + RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				14C7086523D4323300155C18 /* Jinny */,
+				14C7086423D4322E00155C18 /* Zedd */,
 				14110BA923CD7F5F00954407 /* Root */,
 				14110B9523CD7F1F00954407 /* AppDelegate.swift */,
 				14110B9723CD7F1F00954407 /* SceneDelegate.swift */,
@@ -95,6 +113,28 @@
 				14110BAD23CD7FF300954407 /* RootInteractor.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		14C7086423D4322E00155C18 /* Zedd */ = {
+			isa = PBXGroup;
+			children = (
+				14C7086623D4324000155C18 /* ZeddRouter.swift */,
+				14C7086723D4324000155C18 /* ZeddViewController.swift */,
+				14C7086823D4324000155C18 /* ZeddBuilder.swift */,
+				14C7086923D4324000155C18 /* ZeddInteractor.swift */,
+			);
+			path = Zedd;
+			sourceTree = "<group>";
+		};
+		14C7086523D4323300155C18 /* Jinny */ = {
+			isa = PBXGroup;
+			children = (
+				14C7086E23D4324700155C18 /* JinnyRouter.swift */,
+				14C7086F23D4324700155C18 /* JinnyViewController.swift */,
+				14C7087023D4324700155C18 /* JinnyBuilder.swift */,
+				14C7087123D4324700155C18 /* JinnyInteractor.swift */,
+			);
+			path = Jinny;
 			sourceTree = "<group>";
 		};
 		73E2EF9851C735ED26B3AF55 /* Frameworks */ = {
@@ -229,12 +269,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C7087423D4324700155C18 /* JinnyBuilder.swift in Sources */,
 				14110BAF23CD7FF300954407 /* RootViewController.swift in Sources */,
+				14C7086D23D4324000155C18 /* ZeddInteractor.swift in Sources */,
+				14C7087523D4324700155C18 /* JinnyInteractor.swift in Sources */,
 				14110BB323CD874B00954407 /* AppComponent.swift in Sources */,
 				14110BAE23CD7FF300954407 /* RootRouter.swift in Sources */,
+				14C7086C23D4324000155C18 /* ZeddBuilder.swift in Sources */,
+				14C7087223D4324700155C18 /* JinnyRouter.swift in Sources */,
+				14C7086B23D4324000155C18 /* ZeddViewController.swift in Sources */,
+				14C7086A23D4324000155C18 /* ZeddRouter.swift in Sources */,
 				14110BB123CD7FF300954407 /* RootInteractor.swift in Sources */,
 				14110B9A23CD7F1F00954407 /* ViewController.swift in Sources */,
 				14110B9623CD7F1F00954407 /* AppDelegate.swift in Sources */,
+				14C7087323D4324700155C18 /* JinnyViewController.swift in Sources */,
 				14110B9823CD7F1F00954407 /* SceneDelegate.swift in Sources */,
 				14110BB023CD7FF300954407 /* RootBuilder.swift in Sources */,
 			);
