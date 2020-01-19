@@ -37,16 +37,18 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     
     override func didLoad() {
         super.didLoad()
+        self.routeToJinny()
+    }
+    
+    func routeToJinny() {
         let jinny = self.jinnyBuilder.build(withListener: self.interactor)
         self.attachChild(jinny)
         self.viewController.present(viewController: jinny.viewControllable)
     }
     
-    func routeToJinny() {
-        
-    }
-    
     func routeToZedd() {
-        
+        let zedd = self.zeddBuilder.build(withListener: self.interactor)
+        self.attachChild(zedd)
+        self.viewController.present(viewController: zedd.viewControllable)
     }
 }
