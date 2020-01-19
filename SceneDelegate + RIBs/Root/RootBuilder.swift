@@ -34,6 +34,12 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         let component = RootComponent(dependency: dependency)
         let viewController = RootViewController()
         let interactor = RootInteractor(presenter: viewController)
-        return RootRouter(interactor: interactor, viewController: viewController)
+        let jinnyBuilder = JinnyBuilder(dependency: component)
+        let zeddBuilder = ZeddBuilder(dependency: component)
+        return RootRouter(interactor: interactor, viewController: viewController, jinnyBuilder: jinnyBuilder, zeddBuilder: zeddBuilder)
     }
+}
+
+extension RootComponent: JinnyDependency, ZeddDependency {
+    
 }

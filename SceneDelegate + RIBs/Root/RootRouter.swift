@@ -20,7 +20,15 @@ protocol RootViewControllable: ViewControllable {
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: RootInteractable, viewController: RootViewControllable) {
+    private let jinnyBuilder: JinnyBuildable
+    private let zeddBuilder: ZeddBuildable
+    init(interactor: RootInteractable,
+         viewController: RootViewControllable,
+         jinnyBuilder: JinnyBuildable,
+         zeddBuilder: ZeddBuildable
+         ) {
+        self.jinnyBuilder = jinnyBuilder
+        self.zeddBuilder = zeddBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
