@@ -17,12 +17,17 @@ protocol RootPresentableListener: class {
 }
 
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
-
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
     weak var listener: RootPresentableListener?
     
     override func viewDidLoad() {
-         super.viewDidLoad()
-
+        super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor.white
-     }
+    }
+    
+    @IBAction func buttonDidTap(_ sender: Any) {
+    }
 }
