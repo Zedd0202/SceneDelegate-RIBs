@@ -18,6 +18,10 @@
 		14110BB023CD7FF300954407 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BAC23CD7FF300954407 /* RootBuilder.swift */; };
 		14110BB123CD7FF300954407 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BAD23CD7FF300954407 /* RootInteractor.swift */; };
 		14110BB323CD874B00954407 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14110BB223CD874B00954407 /* AppComponent.swift */; };
+		1431775324A2EA3400643138 /* ChildInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431774F24A2EA3400643138 /* ChildInteractor.swift */; };
+		1431775424A2EA3500643138 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431775024A2EA3400643138 /* ChildViewController.swift */; };
+		1431775524A2EA3500643138 /* ChildBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431775124A2EA3400643138 /* ChildBuilder.swift */; };
+		1431775624A2EA3500643138 /* ChildRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431775224A2EA3400643138 /* ChildRouter.swift */; };
 		9C2FD3CA3E239F264C148FA5 /* Pods_SceneDelegate___RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CFD1B8EE2F3DAD947582B6 /* Pods_SceneDelegate___RIBs.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		14110BAC23CD7FF300954407 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		14110BAD23CD7FF300954407 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		14110BB223CD874B00954407 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		1431774F24A2EA3400643138 /* ChildInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildInteractor.swift; sourceTree = "<group>"; };
+		1431775024A2EA3400643138 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		1431775124A2EA3400643138 /* ChildBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildBuilder.swift; sourceTree = "<group>"; };
+		1431775224A2EA3400643138 /* ChildRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRouter.swift; sourceTree = "<group>"; };
 		39CFD1B8EE2F3DAD947582B6 /* Pods_SceneDelegate___RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_SceneDelegate___RIBs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F891EDC22C573C29B6006069 /* Pods-SceneDelegate + RIBs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneDelegate + RIBs.release.xcconfig"; path = "Target Support Files/Pods-SceneDelegate + RIBs/Pods-SceneDelegate + RIBs.release.xcconfig"; sourceTree = "<group>"; };
 		FEABA7D5F0261E91BBD7CE35 /* Pods-SceneDelegate + RIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneDelegate + RIBs.debug.xcconfig"; path = "Target Support Files/Pods-SceneDelegate + RIBs/Pods-SceneDelegate + RIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 		1431773E24A1EA8F00643138 /* Child */ = {
 			isa = PBXGroup;
 			children = (
+				1431775124A2EA3400643138 /* ChildBuilder.swift */,
+				1431774F24A2EA3400643138 /* ChildInteractor.swift */,
+				1431775224A2EA3400643138 /* ChildRouter.swift */,
+				1431775024A2EA3400643138 /* ChildViewController.swift */,
 			);
 			path = Child;
 			sourceTree = "<group>";
@@ -238,11 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14110BAF23CD7FF300954407 /* RootViewController.swift in Sources */,
+				1431775624A2EA3500643138 /* ChildRouter.swift in Sources */,
+				1431775524A2EA3500643138 /* ChildBuilder.swift in Sources */,
 				14110BB323CD874B00954407 /* AppComponent.swift in Sources */,
 				14110BAE23CD7FF300954407 /* RootRouter.swift in Sources */,
 				14110BB123CD7FF300954407 /* RootInteractor.swift in Sources */,
+				1431775424A2EA3500643138 /* ChildViewController.swift in Sources */,
 				14110B9A23CD7F1F00954407 /* ViewController.swift in Sources */,
 				14110B9623CD7F1F00954407 /* AppDelegate.swift in Sources */,
+				1431775324A2EA3400643138 /* ChildInteractor.swift in Sources */,
 				14110B9823CD7F1F00954407 /* SceneDelegate.swift in Sources */,
 				14110BB023CD7FF300954407 /* RootBuilder.swift in Sources */,
 			);
