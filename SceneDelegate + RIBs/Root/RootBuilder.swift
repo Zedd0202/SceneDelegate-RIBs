@@ -13,8 +13,13 @@ protocol RootDependency: Dependency {
     // created by this RIB.
 }
 
-final class RootComponent: Component<RootDependency> {
+final class RootComponent: Component<RootDependency>, ChildDependency {
+    var someString: String
 
+    init(dependency: RootDependency, string: String) {
+        self.someString = string
+        super.init(dependency: dependency)
+    }
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
@@ -31,10 +36,9 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build() -> LaunchRouting {
-        let component = RootComponent(dependency: dependency)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "RootViewController") as! RootViewController
         let interactor = RootInteractor(presenter: viewController)
-        return RootRouter(interactor: interactor, viewController: viewController)
+        return RootRouter(interactor: interactor, viewController: viewController, childBuilder: ChildBuildable)
     }
 }

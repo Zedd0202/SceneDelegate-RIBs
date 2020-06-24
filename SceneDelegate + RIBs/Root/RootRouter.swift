@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable {
+protocol RootInteractable: Interactable, ChildListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -19,9 +19,17 @@ protocol RootViewControllable: ViewControllable {
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
 
+    var childBuilder: ChildBuildable
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: RootInteractable, viewController: RootViewControllable) {
+    init(interactor: RootInteractable, viewController: RootViewControllable, childBuilder: ChildBuildable) {
+        //super.init(interactor: interactor, viewController: viewController, childBuilder: ChildBuildable)
+        self.childBuilder = childBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    func showChild(with string: String) {
+        let child = self.childBuilder.build(withListener: self.interactor)
+        self.attachChild(child)
     }
 }
