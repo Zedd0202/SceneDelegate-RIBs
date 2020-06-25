@@ -14,7 +14,6 @@ protocol RootPresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
-    func showChild(with string: String)
 }
 
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
@@ -30,6 +29,5 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     }
     
     @IBAction func buttonDidTap(_ sender: Any) {
-        self.listener?.showChild(with: self.myTextField.text ?? "")
     }
 }

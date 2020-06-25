@@ -11,14 +11,10 @@ import RIBs
 protocol ChildDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
-    var someString: String { get }
 }
 
 final class ChildComponent: Component<ChildDependency> {
 
-    var someString: String {
-        return self.dependency.someString
-    }
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
@@ -37,7 +33,6 @@ final class ChildBuilder: Builder<ChildDependency>, ChildBuildable {
     func build(withListener listener: ChildListener) -> ChildRouting {
         let component = ChildComponent(dependency: dependency)
         let viewController = ChildViewController()
-        viewController.title = component.someString
         let interactor = ChildInteractor(presenter: viewController)
         interactor.listener = listener
         return ChildRouter(interactor: interactor, viewController: viewController)
